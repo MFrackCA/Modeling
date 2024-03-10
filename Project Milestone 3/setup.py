@@ -2,7 +2,7 @@ import subprocess
 from distutils.command.build import build as _build
 import setuptools
 
-class build(_build):  # pylint: disable=invalid-name
+class build(_build):
     sub_commands = _build.sub_commands + [('CustomCommands', None)]
 
 class CustomCommands(setuptools.Command):
